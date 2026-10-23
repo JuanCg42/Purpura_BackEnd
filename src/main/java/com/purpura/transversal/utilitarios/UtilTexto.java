@@ -12,7 +12,7 @@ public class UtilTexto {
 		
 		
 			synchronized (UtilTexto.class) {
-				if(UtilObjeto.esNulo(INSTANCIA) ) {// Si el objeto que me envian, verifique si es nulo
+				if(UtilObjeto.esNulo(INSTANCIA) ) {
 					INSTANCIA = new UtilTexto();
 				
 			}

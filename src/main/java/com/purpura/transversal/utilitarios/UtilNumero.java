@@ -16,4 +16,17 @@ public class UtilNumero {
 		
 		return  obtenerValorDefecto(numeroUno).doubleValue()> obtenerValorDefecto(numeroDos).doubleValue();
 	}
+	
+	
+	public static <N extends Number> boolean menorQue(N numeroUno, N numeroDos) {
+		
+		return  obtenerValorDefecto(numeroUno).doubleValue()< obtenerValorDefecto(numeroDos).doubleValue();
+	}
+	
+	public static <N extends Number> boolean esNegativo(N valor){
+		return menorQue(valor,CERO);
+	}
+	
+	
+	
 }
