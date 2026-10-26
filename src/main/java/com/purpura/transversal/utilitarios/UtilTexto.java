@@ -2,8 +2,8 @@ package com.purpura.transversal.utilitarios;
 
 public class UtilTexto {
 	private static UtilTexto INSTANCIA;
-	public static String VACIA = "";
-	public static final String SOLO_LETRAS_ESPACIOS = "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$";
+	public static final String VACIA = "";
+	public static final String SOLO_LETRAS_ESPACIOS = "^[a-zA-Z ñÑáÁéÉíÍóÓúÚüÜ]*$";
 
 	private UtilTexto() {
 

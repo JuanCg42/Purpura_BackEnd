@@ -30,12 +30,26 @@ public class UtilFecha {
 		return obtenerValorDefecto(fechaHora).format(FORMATO_FECHA_HORA);
 
 	}
-	
-	public static boolean esFechaHoraDefecto(LocalDateTime fechaHora) {
-	    return FECHA_HORA_DEFECTO.equals(obtenerValorDefecto(fechaHora));
-	}
-	
 
-	
+	public static boolean esFechaHoraDefecto(LocalDateTime fechaHora) {
+		return FECHA_HORA_DEFECTO.equals(obtenerValorDefecto(fechaHora));
+	}
+
+	public static LocalDateTime sumarDias(LocalDateTime fechaHora, int dias) {
+		return obtenerValorDefecto(fechaHora).plusDays(dias);
+	}
+
+	public static boolean esAnterior(LocalDateTime fechaHoraUno, LocalDateTime fechaHoraDos) {
+		return obtenerValorDefecto(fechaHoraUno).isBefore(obtenerValorDefecto(fechaHoraDos));
+	}
+
+	public static boolean esPosterior(LocalDateTime fechaHoraUno, LocalDateTime fechaHoraDos) {
+		return obtenerValorDefecto(fechaHoraUno).isAfter(obtenerValorDefecto(fechaHoraDos));
+	}
+
+	public static long contarDiasEntre(LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraFin) {
+		return ChronoUnit.DAYS.between(obtenerValorDefecto(fechaHoraInicio).toLocalDate(),
+				obtenerValorDefecto(fechaHoraFin).toLocalDate());
+	}
 
 }
