@@ -7,7 +7,7 @@ import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class CiudadDTO {
-	
+
 	private DepartamentoDTO departamento;
 	private UUID id;
 	private String nombre;

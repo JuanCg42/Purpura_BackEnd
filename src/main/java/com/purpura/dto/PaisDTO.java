@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.BindParam;
 import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
-
 public class PaisDTO {
-
 
 	@BindParam("id")
 	private UUID id;
@@ -38,5 +36,3 @@ public class PaisDTO {
 	}
 
 }
-
-

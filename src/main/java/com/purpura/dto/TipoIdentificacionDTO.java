@@ -22,7 +22,7 @@ public class TipoIdentificacionDTO {
 		setId(UtilUUID.obtenerUUIDDefecto());
 		setNombre(UtilTexto.VACIA);
 		setDescripcion(UtilTexto.VACIA);
-		
+
 	}
 
 	public UUID getId() {
