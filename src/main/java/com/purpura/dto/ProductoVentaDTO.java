@@ -8,7 +8,7 @@ import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class ProductoVentaDTO {
 	private ProductoDTO producto;
-	private VentaDTO venta;
+	private VentaDTO codigoVenta;
 	private UUID id;
 	private int precioVenta;
 	private int cantidad;
@@ -33,11 +33,11 @@ public class ProductoVentaDTO {
 	}
 
 	public VentaDTO getVenta() {
-		return venta;
+		return codigoVenta;
 	}
 
 	public void setVenta(VentaDTO venta) {
-		this.venta = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(venta, new VentaDTO());
+		this.codigoVenta = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(codigoVenta, new VentaDTO());
 	}
 
 	public UUID getId() {
