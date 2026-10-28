@@ -5,7 +5,7 @@ import java.util.UUID;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
-public class ClienteDTO {
+public final class ClienteDTO {
 	private PersonaDTO persona;
 	private UUID id;
 
