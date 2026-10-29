@@ -17,7 +17,7 @@ public class ProductoVentaDTO {
 	
 	public ProductoVentaDTO() {
 		setProducto(new ProductoDTO());
-		setVenta(new VentaDTO());
+		setCodigoVenta(new VentaDTO());
 		setId(UtilUUID.obtenerUUIDDefecto());
 		setPrecioVenta(UtilNumero.CERO);
 		setCantidad(UtilNumero.CERO);
@@ -32,11 +32,11 @@ public class ProductoVentaDTO {
 		this.producto = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(producto, new ProductoDTO());
 	}
 
-	public VentaDTO getVenta() {
+	public VentaDTO getCodigoVenta() {
 		return codigoVenta;
 	}
 
-	public void setVenta(VentaDTO venta) {
+	public void setCodigoVenta(VentaDTO codigoVenta) {
 		this.codigoVenta = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(codigoVenta, new VentaDTO());
 	}
 

@@ -14,7 +14,7 @@ public class PagoVentaDTO {
 	
 	public PagoVentaDTO() {
 		setFormaPago(new FormaPagoDTO());
-		setVenta(new VentaDTO());
+		setCodigoVenta(new VentaDTO());
 		setId(UtilUUID.obtenerUUIDDefecto());
 		setMonto(UtilNumero.CERO);
 		
@@ -28,11 +28,11 @@ public class PagoVentaDTO {
 		this.formaPago = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(formaPago,new FormaPagoDTO());
 	}
 
-	public VentaDTO getVenta() {
+	public VentaDTO getCodigoVenta() {
 		return codigoVenta;
 	}
 
-	public void setVenta(VentaDTO venta) {
+	public void setCodigoVenta(VentaDTO codigoVenta) {
 		this.codigoVenta = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(codigoVenta, new VentaDTO());
 	}
 

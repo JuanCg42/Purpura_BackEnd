@@ -163,7 +163,7 @@ public class VentaDominio {
 		}
 
 		public Builder codigoVenta(String codigoVenta) {
-			this.codigoVenta = codigoVenta;
+			this.codigoVenta = UtilTexto.getUtilTexto().quitarEspacioEnBlanco(codigoVenta);
 			return this;
 		}
 
@@ -174,7 +174,7 @@ public class VentaDominio {
 		}
 
 		public Builder anulada(boolean anulada) {
-			this.confirmada = anulada;
+			this.anulada = anulada;
 			return this;
 
 		}
