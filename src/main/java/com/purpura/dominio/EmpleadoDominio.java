@@ -39,7 +39,7 @@ public class EmpleadoDominio {
 		public Builder() {
 			id = UtilUUID.obtenerUUIDDefecto();
 			persona = new PersonaDominio.Builder().build();
-			activo = false;
+			activo = true;
 		}
 
 		public Builder id(UUID id) {
