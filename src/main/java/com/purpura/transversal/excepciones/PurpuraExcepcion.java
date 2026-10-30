@@ -14,7 +14,7 @@ public class PurpuraExcepcion extends RuntimeException {
 	private Exception excepcionRaiz;
 
 	protected PurpuraExcepcion(Capa capa, String mensajeTecnico, String mensajeUsuario, Exception excepcionRaiz) {
-		super();
+
 		setCapa(capa);
 		setMensajeUsuario(mensajeUsuario);
 		setMensajeTecnico(mensajeTecnico);
@@ -48,7 +48,7 @@ public class PurpuraExcepcion extends RuntimeException {
 	}
 
 	private void setMensajeTecnico(String mensajeTecnico) {
-		this.mensajeTecnico = UtilTexto.getUtilTexto().obtenerValorDefecto(mensajeTecnico,getMensajeUsuario());
+		this.mensajeTecnico = UtilTexto.getUtilTexto().obtenerValorDefecto(mensajeTecnico, getMensajeUsuario());
 	}
 
 	private void setMensajeUsuario(String mensajeUsuario) {

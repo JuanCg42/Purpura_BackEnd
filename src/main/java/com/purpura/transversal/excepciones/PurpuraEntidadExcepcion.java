@@ -15,12 +15,12 @@ public class PurpuraEntidadExcepcion extends PurpuraExcepcion {
 		return new PurpuraEntidadExcepcion(mensajeUsuario, mensajeUsuario, new Exception(mensajeUsuario));
 	}
 	
-	public static PurpuraExcepcion crear(String mensajeTecnico,String mensajeUsuario) {
-		return new PurpuraEntidadExcepcion(mensajeTecnico, mensajeUsuario, new Exception(mensajeTecnico));
+	public static PurpuraExcepcion crear(String mensajeUsuario,String mensajeTecnico) {
+		return new PurpuraEntidadExcepcion(mensajeUsuario, mensajeTecnico, new Exception(mensajeTecnico));
 	}
 	
-	public static PurpuraExcepcion crear(String mensajeTecnico,String mensajeUsuario,Exception excepcionRaiz) {
-		return new PurpuraEntidadExcepcion(mensajeTecnico, mensajeUsuario,excepcionRaiz);
+	public static PurpuraExcepcion crear(String mensajeUsuario,String mensajeTecnico,Exception excepcionRaiz) {
+		return new PurpuraEntidadExcepcion(mensajeUsuario, mensajeTecnico,excepcionRaiz);
 	}
 
 }
