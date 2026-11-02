@@ -3,6 +3,8 @@ package com.purpura.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilFecha;
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
@@ -10,13 +12,24 @@ import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class MovimientoInventarioDTO {
+	@BindParam("productoSede")
 	private ProductoSedeDTO productoSede;
+
+	@BindParam("tipoMovimiento")
 	private TipoMovimientoDTO tipoMovimiento;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("cantidad")
 	private int cantidad;
+
+	@BindParam("observacion")
 	private String observacion;
+
+	@BindParam("fechaHora")
 	private LocalDateTime fechaHora;
-	
+
 	public MovimientoInventarioDTO() {
 		setProductoSede(new ProductoSedeDTO());
 		setTipoMovimiento(new TipoMovimientoDTO());
@@ -24,8 +37,7 @@ public class MovimientoInventarioDTO {
 		setCantidad(UtilNumero.CERO);
 		setObservacion(UtilTexto.VACIA);
 		setFechaHora(UtilFecha.FECHA_HORA_DEFECTO);
-		
-		
+
 	}
 
 	public ProductoSedeDTO getProductoSede() {
@@ -41,7 +53,8 @@ public class MovimientoInventarioDTO {
 	}
 
 	public void setTipoMovimiento(TipoMovimientoDTO tipoMovimiento) {
-		this.tipoMovimiento = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(tipoMovimiento, new TipoMovimientoDTO());
+		this.tipoMovimiento = UtilObjeto.obtenerValorDefectoSiValorOriginalEsNulo(tipoMovimiento,
+				new TipoMovimientoDTO());
 	}
 
 	public UUID getId() {

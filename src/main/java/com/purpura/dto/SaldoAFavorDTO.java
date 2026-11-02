@@ -3,18 +3,33 @@ package com.purpura.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilFecha;
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class SaldoAFavorDTO {
+	@BindParam("cliente")
 	private ClienteDTO cliente;
+
+	@BindParam("venta")
 	private VentaDTO venta;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("monto")
 	private int monto;
+
+	@BindParam("fechaHora")
 	private LocalDateTime fechaHora;
+
+	@BindParam("disponible")
 	private boolean disponible;
+
+	@BindParam("fechaConsumo")
 	private LocalDateTime fechaConsumo;
 
 	public SaldoAFavorDTO() {

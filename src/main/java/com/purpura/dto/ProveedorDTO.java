@@ -2,15 +2,23 @@ package com.purpura.dto;
 
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class ProveedorDTO {
-
+	@BindParam("nombreVendedor")
 	private PersonaDTO persona;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("nombreVendedor")
 	private String nombreVendedor;
+
+	@BindParam("activo")
 	private boolean activo;
 
 	public ProveedorDTO() {

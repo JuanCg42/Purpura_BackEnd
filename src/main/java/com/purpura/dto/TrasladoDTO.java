@@ -3,19 +3,32 @@ package com.purpura.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilFecha;
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class TrasladoDTO {
+	@BindParam("sede")
 	private SedeDTO sede;
+
+	@BindParam("empleado")
 	private EmpleadoDTO empleado;
+
+	@BindParam("productoSede")
 	private ProductoSedeDTO productoSede;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("cantidad")
 	private int cantidad;
+
+	@BindParam("fechaHora")
 	private LocalDateTime fechaHora;
-	
+
 	public TrasladoDTO() {
 		setSede(new SedeDTO());
 		setEmpleado(new EmpleadoDTO());

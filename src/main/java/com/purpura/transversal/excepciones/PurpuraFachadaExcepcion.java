@@ -6,8 +6,8 @@ public class PurpuraFachadaExcepcion extends PurpuraExcepcion {
 
 	private static final long serialVersionUID = 1L;
 
-	protected PurpuraFachadaExcepcion(String mensajeTecnico, String mensajeUsuario, Exception excepcionRaiz) {
-		super(Capa.FACHADA, mensajeTecnico, mensajeUsuario, excepcionRaiz);
+	protected PurpuraFachadaExcepcion(String mensajeUsuario, String mensajeTecnico, Exception excepcionRaiz) {
+		super(Capa.FACHADA, mensajeUsuario, mensajeTecnico, excepcionRaiz);
 
 	}
 

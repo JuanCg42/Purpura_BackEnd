@@ -6,8 +6,8 @@ public class PurpuraEntidadExcepcion extends PurpuraExcepcion {
 
 	private static final long serialVersionUID = 1L;
 
-	protected PurpuraEntidadExcepcion(String mensajeTecnico, String mensajeUsuario, Exception excepcionRaiz) {
-		super(Capa.ENTIDAD, mensajeTecnico, mensajeUsuario, excepcionRaiz);
+	protected PurpuraEntidadExcepcion(String mensajeUsuario, String mensajeTecnico, Exception excepcionRaiz) {
+		super(Capa.ENTIDAD, mensajeUsuario, mensajeTecnico, excepcionRaiz);
 
 	}
 

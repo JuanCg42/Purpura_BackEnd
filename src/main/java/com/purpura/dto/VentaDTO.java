@@ -3,6 +3,8 @@ package com.purpura.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilFecha;
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
@@ -10,17 +12,41 @@ import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class VentaDTO {
+
+	@BindParam("cuentaPorCobrar")
 	private CuentaPorCobrarDTO cuentaPorCobrar;
+
+	@BindParam("sede")
 	private SedeDTO sede;
+
+	@BindParam("tipoEstadoPago")
 	private TipoEstadoPagoDTO tipoEstadoPago;
+
+	@BindParam("empleado")
 	private EmpleadoDTO empleado;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("fechaHora")
 	private LocalDateTime fechaHora;
+
+	@BindParam("plazoDia")
 	private int plazoDia;
+
+	@BindParam("fechaLimitePago")
 	private LocalDateTime fechaLimitePago;
+
+	@BindParam("codigoVenta")
 	private String codigoVenta;
+
+	@BindParam("confirmada")
 	private boolean confirmada;
+
+	@BindParam("anulada")
 	private boolean anulada;
+
+	@BindParam("fechaAnulacion")
 	private LocalDateTime fechaAnulacion;
 
 	public VentaDTO() {

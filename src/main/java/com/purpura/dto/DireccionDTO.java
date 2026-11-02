@@ -2,13 +2,20 @@ package com.purpura.dto;
 
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class DireccionDTO {
+	@BindParam("ciudad")
 	private CiudadDTO ciudad;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("nombre")
 	private String nombre;
 
 	public DireccionDTO() {

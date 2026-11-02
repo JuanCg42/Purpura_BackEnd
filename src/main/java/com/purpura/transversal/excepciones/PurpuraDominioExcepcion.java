@@ -6,8 +6,8 @@ public class PurpuraDominioExcepcion extends PurpuraExcepcion {
 
 	private static final long serialVersionUID = 1L;
 
-	protected PurpuraDominioExcepcion(String mensajeTecnico, String mensajeUsuario, Exception excepcionRaiz) {
-		super(Capa.DOMINIO, mensajeTecnico, mensajeUsuario, excepcionRaiz);
+	protected PurpuraDominioExcepcion(String mensajeUsuario, String mensajeTecnico, Exception excepcionRaiz) {
+		super(Capa.DOMINIO, mensajeUsuario, mensajeTecnico, excepcionRaiz);
 
 	}
 

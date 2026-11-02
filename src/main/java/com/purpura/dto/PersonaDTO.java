@@ -2,19 +2,38 @@ package com.purpura.dto;
 
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class PersonaDTO {
+	@BindParam("tipoIdentificacion")
 	private TipoIdentificacionDTO tipoIdentificacion;
+
+	@BindParam("direccion")
 	private DireccionDTO direccion;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("numeroIdentificacion")
 	private String numeroIdentificacion;
+
+	@BindParam("nombre")
 	private String nombre;
+
+	@BindParam("telefono")
 	private String telefono;
+
+	@BindParam("correoElectronico")
 	private String correoElectronico;
+
+	@BindParam("verificarNumero")
 	private boolean verificarNumero;
+
+	@BindParam("verificarCorreo")
 	private boolean verificarCorreo;
 
 	public PersonaDTO() {

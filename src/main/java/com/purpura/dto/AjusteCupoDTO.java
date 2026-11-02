@@ -3,6 +3,8 @@ package com.purpura.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilFecha;
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
@@ -10,12 +12,25 @@ import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class AjusteCupoDTO {
+	@BindParam("cuentaPorCobrar")
 	private CuentaPorCobrarDTO cuentaPorCobrar;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("fechaHora")
 	private LocalDateTime fechaHora;
+
+	@BindParam("cupoAnterior")
 	private int cupoAnterior;
+
+	@BindParam("cupoNuevo")
 	private int cupoNuevo;
+
+	@BindParam("diasMoraAcumulados")
 	private int diasMoraAcumulados;
+
+	@BindParam("motivo")
 	private String motivo;
 
 	public AjusteCupoDTO() {

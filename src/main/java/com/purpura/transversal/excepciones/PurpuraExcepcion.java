@@ -13,7 +13,7 @@ public class PurpuraExcepcion extends RuntimeException {
 	private String mensajeUsuario;
 	private Exception excepcionRaiz;
 
-	protected PurpuraExcepcion(Capa capa, String mensajeTecnico, String mensajeUsuario, Exception excepcionRaiz) {
+	protected PurpuraExcepcion(Capa capa, String mensajeUsuario, String mensajeTecnico, Exception excepcionRaiz) {
 
 		setCapa(capa);
 		setMensajeUsuario(mensajeUsuario);

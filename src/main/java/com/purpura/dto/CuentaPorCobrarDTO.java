@@ -2,18 +2,33 @@ package com.purpura.dto;
 
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class CuentaPorCobrarDTO {
+	@BindParam("cliente")
 	private ClienteDTO cliente;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("codigoCartera")
 	private String codigoCartera;
+
+	@BindParam("total")
 	private int total;
+
+	@BindParam("pendiente")
 	private int pendiente;
+
+	@BindParam("cupoMaximo")
 	private int cupoMaximo;
+
+	@BindParam("cupoDisponible")
 	private int cupoDisponible;
 
 	public CuentaPorCobrarDTO() {

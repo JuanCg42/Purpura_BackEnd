@@ -6,8 +6,8 @@ public class PurpuraTransversalExcepcion extends PurpuraExcepcion {
 
 	private static final long serialVersionUID = 1L;
 
-	protected PurpuraTransversalExcepcion(String mensajeTecnico, String mensajeUsuario, Exception excepcionRaiz) {
-		super(Capa.TRANSVERSAL, mensajeTecnico, mensajeUsuario, excepcionRaiz);
+	protected PurpuraTransversalExcepcion(String mensajeUsuario, String mensajeTecnico, Exception excepcionRaiz) {
+		super(Capa.TRANSVERSAL, mensajeUsuario, mensajeTecnico, excepcionRaiz);
 
 	}
 

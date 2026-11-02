@@ -2,22 +2,32 @@ package com.purpura.dto;
 
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class ProductoSedeDTO {
+
+	@BindParam("producto")
 	private ProductoDTO producto;
-	private SedeDTO sede;
-	private UUID id;
-	private int stock;
 	
-	public ProductoSedeDTO(){
+	@BindParam("sede")
+	private SedeDTO sede;
+	
+	@BindParam("id")
+	private UUID id;
+	
+	@BindParam("stock")
+	private int stock;
+
+	public ProductoSedeDTO() {
 		setProducto(new ProductoDTO());
 		setSede(new SedeDTO());
 		setId(UtilUUID.obtenerUUIDDefecto());
 		setStock(UtilNumero.CERO);
-		
+
 	}
 
 	public ProductoDTO getProducto() {

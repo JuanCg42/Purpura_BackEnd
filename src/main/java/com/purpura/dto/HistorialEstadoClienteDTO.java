@@ -3,16 +3,29 @@ package com.purpura.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilFecha;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class HistorialEstadoClienteDTO {
+	@BindParam("cliente")
 	private ClienteDTO cliente;
+	
+	@BindParam("tipoEstadoPago")
 	private TipoEstadoPagoDTO tipoEstadoPago;
+	
+	@BindParam("venta")
 	private VentaDTO venta;
+	
+	@BindParam("id")
 	private UUID id;
+	
+	@BindParam("fechaInicio")
 	private LocalDateTime fechaInicio;
+	
+	@BindParam("fechaFin")
 	private LocalDateTime fechaFin;
 	
 	public HistorialEstadoClienteDTO() {

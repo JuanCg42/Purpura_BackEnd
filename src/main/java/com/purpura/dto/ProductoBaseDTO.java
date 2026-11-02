@@ -2,19 +2,36 @@ package com.purpura.dto;
 
 import java.util.UUID;
 
+import org.springframework.web.bind.annotation.BindParam;
+
 import com.purpura.transversal.utilitarios.UtilNumero;
 import com.purpura.transversal.utilitarios.UtilObjeto;
 import com.purpura.transversal.utilitarios.UtilTexto;
 import com.purpura.transversal.utilitarios.UtilUUID;
 
 public class ProductoBaseDTO {
+	@BindParam("tallaje")
 	private TallajeDTO tallaje;
+
+	@BindParam("categoria")
 	private CategoriaDTO categoria;
+
+	@BindParam("proveedor")
 	private ProveedorDTO proveedor;
+
+	@BindParam("id")
 	private UUID id;
+
+	@BindParam("codigoBarras")
 	private String codigoBarras;
+
+	@BindParam("nombre")
 	private String nombre;
+
+	@BindParam("costo")
 	private int costo;
+
+	@BindParam("precioVenta")
 	private int precioVenta;
 
 	public ProductoBaseDTO() {
